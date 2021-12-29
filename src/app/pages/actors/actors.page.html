@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Actors</ion-title>
+    <ion-menu-button slot="start"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <div class="m-date"  *ngFor="let a of actors | async" (click)="a.expanded = !a.expanded">
+    <ion-row>
+        <ion-card class="m-element">
+            <ion-card-content class="m-container">
+                <ion-row class="m-row">
+                    <ion-col class="m-image">
+                      <ion-img [src]="a.image_path"></ion-img>
+                    </ion-col>
+                    <ion-col class="m-content">
+                        <ion-item class="m-item">
+                            <ion-label class="m-label"> {{ a.name }}</ion-label>
+                        </ion-item>
+                        <ion-item class="m-item">
+                            <ion-label class="m-label"> {{ a.age }} Ans</ion-label>
+                        </ion-item>
+                        <ion-item class="m-item">
+                            <ion-label class="m-label"> <ion-icon name="star-half-outline"></ion-icon> 
+                              {{ a.rating }}</ion-label>
+                        </ion-item>
+                        <br>
+                        <br>
+                        <div class="m-item" style="color: blue; text-align: center;" (click)="onSwitch()" >
+                           {{ racem ? 'Afficher description' : 'masquer description' }}
+                        </div>
+
+                        
+                        <div class="m-item" *ngIf="condition == true " >
+                          <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                        </div>
+                        <div class="m-item" *ngIf=" !condition" >
+                          <ion-icon name="chevron-up-circle-outline"></ion-icon>
+                        </div>
+                      
+
+                        
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+
+            <div [hidden]="!a.expanded">
+              {{ a.description }}
+            </div>
+        </ion-card>
+    </ion-row>
+</div>
+ 
+  
+
+ 
+</ion-content>
+
+
+
+
+
+
+
+
+
+<div *ngFor="let post of posts">
+  <h1>
+    <p>Nom : {{ post.title }}</p>
+  </h1>
+  <p class="image-preview" ><img [src]="post.imagePath" [alt]="post.title"></p>
+  <h1>
+    <p>categorie:{{ post.cetegorie }}</p>
+  </h1>
+  <h1>
+    <p>Race:{{ post.race }}</p>
+  </h1>
+  <h1>
+    <p>age : {{ post.age }}</p>
+  </h1>
+  <h1>
+    <p>ville :{{ post.ville }}</p>
+  </h1>
+  <h1>
+    <p>num tel :{{ post.tel}}</p>
+  </h1>
+  <p>Description : {{ post.content }}</p>
+
+  <div *ngIf="userIsAuthenticated && userId === post.creator">
+    <ion-button  (click)="onDelete(post.id)">Delete</ion-button>
+  </div>
+</div>

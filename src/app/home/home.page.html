@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>
+      <h1>Accueil</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content [fullscreen]="true">
+ <!-- <ion-button [routerLink]="['/authentification']">Déconnexion</ion-button>-->
+  <ion-grid>
+
+  <ion-row>
+  <ion-col [routerLink]="['/menu/meteo']">
+  <div class="ion-padding-start">
+  <ion-img src="assets/images/racem2.png"></ion-img>
+  <ion-card-content>
+  <ion-card-title>
+  Calendar
+  </ion-card-title>
+  </ion-card-content>
+  </div>
+  </ion-col>
+  <ion-col size="1">
+  </ion-col>
+
+  <ion-col [routerLink]="['/menu/results']">
+    <div class="ion-padding-end">
+    <ion-img src="assets/images/film1.png"></ion-img>
+    <ion-card-content>
+    <ion-card-title>
+    Film Info
+    </ion-card-title>
+    </ion-card-content>
+    </div>
+    </ion-col>
+    </ion-row>
+  
+
+
+  <ion-row>
+  <ion-col [routerLink]="['/menu/store']">
+  <div class="ion-padding-start">
+  <ion-img src="assets/images/store.png"></ion-img>
+  <ion-card-content>
+  <ion-card-title>
+  Store
+  </ion-card-title>
+  </ion-card-content>
+  </div>
+  </ion-col>
+  <ion-col size="1">
+  </ion-col>
+
+
+  <ion-col [routerLink]="['/menu/chat']">
+    <div class="ion-padding-end">
+    <ion-img src="assets/images/chat.png"></ion-img>
+    <ion-card-content>
+    <ion-card-title>
+    chat
+    </ion-card-title>
+    </ion-card-content>
+    </div>
+    </ion-col>
+    </ion-row>
+
+  
+
+  <ion-row>
+  <ion-col [routerLink]="['/menu/actors']">
+  <div class="ion-padding-start">
+  <ion-img src="assets/images/actors.png"></ion-img>
+  <ion-card-content>
+  <ion-card-title>
+  Actors
+  </ion-card-title>
+  </ion-card-content>
+  </div>
+  </ion-col>
+  <ion-col size="1">
+  </ion-col>
+  
+  <ion-col [routerLink]="['/menu/actorapi']">
+  <div class="ion-padding-end">
+  <ion-img src="assets/images/actorss.png"></ion-img>
+  </div>
+  <ion-card-content class="ion-padding-start">
+  <ion-card-title>
+  Actors & Film
+  </ion-card-title>
+  </ion-card-content>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+ </ion-content>

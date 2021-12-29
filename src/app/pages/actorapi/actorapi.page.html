@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color='dark' >
+    <div class="racem">
+   Actors Trend Film
+  </div>
+    <ion-menu-button slot="start"></ion-menu-button>
+  </ion-toolbar>
+
+  <ion-toolbar color='dark'>
+  <ion-searchbar placeholder="Search Actor By Name" [(ngModel)]="Actor11"></ion-searchbar>
+    <ion-buttons slot="end">
+
+    <ion-button color="light" (click)="ActorsInfo()">
+    <ion-icon name="search-sharp"></ion-icon>
+    </ion-button>
+
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="Actorss">
+  <div class="img_box">
+  <img src="{{Actorss.results[0].image}}">
+</div>
+
+<ion-card>
+<ion-card-content>
+
+  <h1>{{Actorss.results[0].title}}</h1>
+<ion-item>
+  <ion-label text-wrap >{{Actorss.results[0].description}}</ion-label>
+</ion-item>
+
+
+</ion-card-content>
+</ion-card>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header>
+  <ion-toolbar >
+    <ion-title>priere</ion-title>
+    <ion-menu-button slot="start"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          Ville:
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="Prieres1"></ion-input>
+        <ion-button (click)="PriereInfo()">OK</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+<ion-card *ngIf="Prieres">
+  
+  <ion-card-content>
+    
+      <ion-img src="{{Prieres.results[0].image}}">
+    
+      </ion-img>
+    <ion-item>
+      <ion-label text-wrap >{{Prieres.results[0].description}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>aaaaaa</ion-label>
+    </ion-item>
+  
+
+    
+   
+  </ion-card-content>
+    
+</ion-card>
+
+
+  </ion-content> -->
