@@ -1,7 +1,6 @@
 ﻿# Contact: trikiracem0@gmail.com
 # ionic-film-api-chat-firebase
-.............
-.............
+﻿# =========================================================================================
 ﻿# Commands
 # Npm install
  # create your own Admin authorization firebase
