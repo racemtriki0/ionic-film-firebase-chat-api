@@ -2,7 +2,7 @@
 # ionic-film-api-chat-firebase
 # ==========================================================================================
 
-# Commands
+# Commands :
 # Npm install
  # create your own Admin authorization firebase
  ![firebase admin](https://user-images.githubusercontent.com/84456341/147851990-e1631f7a-8524-4195-a86c-f100d168e3f5.JPG)
